@@ -37,7 +37,7 @@ def obtener_detalles(req: SongRequest):
     resultados = []
     for idx in req.indices:
         resultados.append({
-            "title": df_g.loc[idx, "song"],
-            "artist": df_g.loc[idx, "artist"]
+            "title": df_g.iloc[idx]["song"],
+            "artist": df_g.iloc[idx]["artist"]
         })
-        return resultados
+    return resultados
